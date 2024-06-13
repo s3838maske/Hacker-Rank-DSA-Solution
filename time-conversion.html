@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+
+
+        
+function timeConversion(s) {
+    // Write your code here
+     let period = s.slice(-2);
+    // Extract the hour, minute, and second part from the string
+    let timeParts = s.slice(0, -2).split(':');
+    let hour = parseInt(timeParts[0], 10);
+    let minute = timeParts[1];
+    let second = timeParts[2];
+
+    if (period === 'AM') {
+        // If hour is 12 AM, convert it to 00
+        if (hour === 12) {
+            hour = '00';
+        } else {
+            // Pad single-digit hours with a leading zero
+            hour = hour < 10 ? '0' + hour : hour;
+        }
+    } else {
+        // If hour is PM and not 12 PM, add 12 to the hour
+        if (hour !== 12) {
+            hour = hour + 12;
+        }
+    }
+
+    // Combine the adjusted hour with the original minute and second parts
+    return hour + ':' + minute + ':' + second;
+
+}
+
+    </script>
+</body>
+</html>

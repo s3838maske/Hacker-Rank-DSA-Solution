@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+
+        
+function countApplesAndOranges(s, t, a, b, apples, oranges) {
+    // Write your code here
+     let appleCount = 0;
+    let orangeCount = 0;
+
+
+    for (let i = 0; i < apples.length; i++) {
+        let appleLanding = a + apples[i];
+        if (appleLanding >= s && appleLanding <= t) {
+            appleCount++;
+        }
+    }
+
+    // Count oranges that fall on the house
+    for (let i = 0; i < oranges.length; i++) {
+        let orangeLanding = b + oranges[i];
+        if (orangeLanding >= s && orangeLanding <= t) {
+            orangeCount++;
+        }
+    }
+
+    // Print the results
+    console.log(appleCount);
+    console.log(orangeCount);
+
+
+}
+    </script>
+    
+</body>
+</html>
