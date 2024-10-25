@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+
+        
+/*
+ * Complete the 'kangaroo' function below.
+ *
+ * The function is expected to return a STRING.
+ * The function accepts following parameters:
+ *  1. INTEGER x1
+ *  2. INTEGER v1
+ *  3. INTEGER x2
+ *  4. INTEGER v2
+ */var x1 = 0;
+var x2 = 3;
+var v1 = 4;
+var v2 = 2;
+
+function kangaroo(x1, v1, x2, v2) {
+    // Check if the kangaroos have the same velocity
+    if (v1 == v2) {
+        if (x1 == x2) {
+            console.log("YES");
+        } else {
+            console.log("NO");
+        }
+    } else {
+        // Calculate the number of jumps `n` correctly
+        var n = Math.ceil((x2 - x1) / (v1 - v2))
+        console.log(n)
+        // Check if `n` is a non-negative integer
+        if (n >= 0) {
+            console.log("YES");
+        } else {
+            console.log("NO");
+        }
+    }
+}
+
+kangaroo(x1, v1, x2, v2);  // Output: YES
+
+
+
+
+
+    </script>
+</body>
+</html>
